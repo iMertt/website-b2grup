@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>B2 Grup | Mimarlık Web Sitesi</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../img/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="../img/logo.png" type="image/png" />
+  </head>
+  <style>
+    .content {
+      flex: none;
+    }
+    .img-content {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .img-content img {
+      margin: 0 5px;
+      max-width: 100%;
+      height: auto;
+      border: 2px solid black;
+      transition: transform 0.3s;
+    }
+
+    .img-content img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <body>
+    <header>
+      <ul>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="../makine.html" title="makine"
+            ><img src="../img/icons/makine.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+        <li class="selected">
+          <a href="../mimarlik.html" title="mimarlık"
+            ><img src="../img/icons/mimarlik.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="../muhendislik.html" title="mühendislik"
+            ><img src="../img/icons/muhendislik.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="../turizm.html" title="turizm"
+            ><img src="../img/icons/turizm.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="../vending.html" title="vending"
+            ><img src="../img/icons/vending.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="../foodDrink.html" title="drink&food"
+            ><img src="../img/icons/food.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="../img/icons/cizgi.jpg" alt="" />
+      </ul>
+    </header>
+    <div class="content">
+      <div class="greeting-box">
+        <div class="greeting-content">
+          <p id="grup" style="font-size: 20px">
+            Mimarlık & İç Mimarlık Hizmetleri
+          </p>
+          <p id="yorum">
+            Mimarlık Alanında Öncü Tasarımlar.
+            <br />Sonuç Olarak Zevkle Yaşanılabilir Mekanlar…
+          </p>
+          <p id="kurumsal">
+            <a
+              href="../mimarlik.html"
+              style="text-decoration: none; color: white"
+              >Mimarlik Web Sitesi</a
+            >
+          </p>
+        </div>
+      </div>
+      <button id="slideButton" class="center red-bg">&#9660;</button>
+    </div>
+    <div class="img-content">
+      <img src="../img/web-sitesi/mimarlik1.jpeg" alt="" />
+      <img src="../img/web-sitesi/mimarlik2.jpeg" alt="" />
+      <img src="../img/web-sitesi/mimarlik3.jpeg" alt="" />
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="social-media">
+          <ul>
+            <li><a href="#" title="facebook" class="fa fa-facebook"></a></li>
+            <li><a href="#" title="twitter" class="fa fa-twitter"></a></li>
+            <li><a href="#" title="instagram" class="fa fa-instagram"></a></li>
+            <li>
+              <a href="#" title="foursquare" class="fa fa-foursquare"></a>
+            </li>
+            <li><a href="#" title="mail gönder" class="fa fa-envelope"></a></li>
+            <li>
+              <a
+                href="../iletisim.html"
+                title="iletişim"
+                target="_blank"
+                class="fa fa-info"
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="grupLogo">
+          <ul>
+            <li>
+              <a href="../index.html"
+                ><img src="../img/footer/logob2grup.png" alt="logob2grup"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var slideButton = document.getElementById("slideButton");
+      var kurumsalContent = document.getElementById("kurumsal");
+
+      slideButton.addEventListener("click", function () {
+        kurumsalContent.classList.toggle("slide");
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var images = document.querySelectorAll(".img-content img");
+
+      function findMinHeight() {
+        var minHeight = Infinity;
+        images.forEach(function (img) {
+          var imgHeight = img.clientHeight || img.offsetHeight;
+          minHeight = Math.min(minHeight, imgHeight);
+        });
+        return minHeight;
+      }
+
+      function setEqualHeight() {
+        var minHeight = findMinHeight();
+        images.forEach(function (img) {
+          img.style.height = minHeight + "px";
+        });
+      }
+
+      setEqualHeight();
+
+      window.addEventListener("resize", setEqualHeight);
+    });
+  </script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>B2 Grup | Mimarlık</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/png" />
+  </head>
+  <style>
+    .content {
+      background-image: url(img/content/arkamimarlik.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <header>
+      <ul>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="makine.html" title="makine"
+            ><img src="img/icons/makine.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+        <li class="selected">
+          <a href="mimarlik.html" title="mimarlık"
+            ><img src="img/icons/mimarlik.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="muhendislik.html" title="mühendislik"
+            ><img src="img/icons/muhendislik.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="turizm.html" title="turizm"
+            ><img src="img/icons/turizm.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="vending.html" title="vending"
+            ><img src="img/icons/vending.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+        <li>
+          <a href="foodDrink.html" title="drink&food"
+            ><img src="img/icons/food.png" alt=""
+          /></a>
+        </li>
+        <img class="cizgi" src="img/icons/cizgi.jpg" alt="" />
+      </ul>
+    </header>
+    <div class="content">
+      <div class="greeting-box">
+        <div class="greeting-content">
+          <p id="grup" style="font-size: 20px">
+            Mimarlık & İç Mimarlık Hizmetleri
+          </p>
+          <p id="yorum">
+            Mimarlık Alanında Öncü Tasarımlar.
+            <br />Sonuç Olarak Zevkle Yaşanılabilir Mekanlar…
+          </p>
+          <p id="kurumsal">
+            <a
+              href="websitesi/mimarlik-web.html"
+              style="text-decoration: none; color: white"
+              >Mimarlik Web Sitesi</a
+            >
+          </p>
+        </div>
+      </div>
+      <button id="slideButton" class="center red-bg">&#9660;</button>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="social-media">
+          <ul>
+            <li><a href="#" title="facebook" class="fa fa-facebook"></a></li>
+            <li><a href="#" title="twitter" class="fa fa-twitter"></a></li>
+            <li><a href="#" title="instagram" class="fa fa-instagram"></a></li>
+            <li>
+              <a href="#" title="foursquare" class="fa fa-foursquare"></a>
+            </li>
+            <li><a href="#" title="mail gönder" class="fa fa-envelope"></a></li>
+            <li>
+              <a
+                href="iletisim.html"
+                title="iletişim"
+                target="_blank"
+                class="fa fa-info"
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="grupLogo">
+          <ul>
+            <li>
+              <a href="index.html"
+                ><img src="img/footer/logob2grup.png" alt="logob2grup"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var slideButton = document.getElementById("slideButton");
+      var kurumsalContent = document.getElementById("kurumsal");
+
+      slideButton.addEventListener("click", function () {
+        kurumsalContent.classList.toggle("slide");
+      });
+    });
+  </script>
+</html>
